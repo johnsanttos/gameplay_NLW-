@@ -41,10 +41,11 @@ const navigation = useNavigation()
                     </Text>
 
                     <ButtonIcon
-                    title='Entrar com Discord'
-                    activeOpacity ={0.7}
+                    title='Entrar com Discord'                  
                     onPress={handleSignIn}
                     />
+
+                    
                 </View>
             </View>
        
