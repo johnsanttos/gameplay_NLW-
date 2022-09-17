@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { View ,Text, FlatList } from 'react-native'
+import { Appointments } from '../../components/Appointments'
 
 import { ButtonAdd } from '../../components/ButtonAdd'
 import { CategorySelected } from '../../components/CategorySelected'
@@ -49,13 +50,13 @@ function handleCategorySelected(categoryId:string) {
                     subtitle='Total 6'
                     />
 
-                    <FlatList
+                    { <FlatList
                     data={appointments}
                     keyExtractor ={item => item.id}
                     renderItem ={({item}) => (
-                        
+                        <Appointments data={item}/>
                     ) }
-                    />
+                    /> }
 
                 </View>
             </View>

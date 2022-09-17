@@ -5,4 +5,19 @@ export const styles = StyleSheet.create({
     container: {
    
     },
+    content:{
+
+    },
+    header:{
+
+    },
+    title: {
+
+    },
+    category:{
+        
+    },
+    playersInfo:{
+        
+    }
 })
