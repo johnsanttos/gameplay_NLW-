@@ -6,6 +6,7 @@ import { ButtonAdd } from '../../components/ButtonAdd'
 import { CategorySelected } from '../../components/CategorySelected'
 import { ListHeader } from '../../components/ListHeader'
 import { Profile } from '../../components/Profile'
+import {ListDivider} from '../../components/ListDivider'
 import { styles } from './style'
 
 export function Home() {
@@ -22,8 +23,20 @@ export function Home() {
             },
             category: '1',
             date:'14/09 ás 15:40h',
-            description: 'É hoje que vamos chegar ao challenger sem perder uma parrtida da Midware'
-        }
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Midware'
+        },
+        {
+            id: '2',
+            guild: {
+                id: '2',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '2',
+            date:'14/09 ás 15:40h',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Midware'
+        },
     ]
 
 function handleCategorySelected(categoryId:string) {
@@ -32,19 +45,18 @@ function handleCategorySelected(categoryId:string) {
 }   
  return (
         <View>
-
             <View style={styles.header}>
                 <Profile />
                 <ButtonAdd />
             </View>
+            
             <View>
-
                 <CategorySelected 
                 categorySelected={category}
                 setCategory= {handleCategorySelected}          
                 />
-                <View style={styles.content} >
-                    
+
+                <View style={styles.content} >     
                     <ListHeader
                     title='Partidas agendadas'
                     subtitle='Total 6'
@@ -55,7 +67,10 @@ function handleCategorySelected(categoryId:string) {
                     keyExtractor ={item => item.id}
                     renderItem ={({item}) => (
                         <Appointments data={item}/>
-                    ) }
+                    )}
+                    ItemSeparatorComponent={() => <ListDivider/> }
+                    style ={styles.matches}
+                    showsVerticalScrollIndicator ={false}
                     /> }
 
                 </View>
