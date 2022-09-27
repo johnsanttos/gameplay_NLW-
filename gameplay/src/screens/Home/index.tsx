@@ -8,6 +8,7 @@ import { ListHeader } from '../../components/ListHeader'
 import { Profile } from '../../components/Profile'
 import {ListDivider} from '../../components/ListDivider'
 import { styles } from './style'
+import { Background } from '../../components/Background';
 
 export function Home() {
     const [category,setCategory] = useState('');
@@ -44,7 +45,7 @@ function handleCategorySelected(categoryId:string) {
      categoryId === category ? setCategory ('')  : setCategory(categoryId)
 }   
  return (
-        <View>
+        <Background>
             <View style={styles.header}>
                 <Profile />
                 <ButtonAdd />
@@ -53,7 +54,8 @@ function handleCategorySelected(categoryId:string) {
             <View>
                 <CategorySelected 
                 categorySelected={category}
-                setCategory= {handleCategorySelected}          
+                setCategory= {handleCategorySelected} 
+                hasCheckBox = {true}       
                 />
 
                 <View style={styles.content} >     
@@ -75,6 +77,6 @@ function handleCategorySelected(categoryId:string) {
 
                 </View>
             </View>
-        </View>
+        </Background>
     )
 }

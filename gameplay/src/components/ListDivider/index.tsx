@@ -8,8 +8,6 @@ export function ListDivider () {
 <View
 style={styles.container}
 />
-
-
   )
 }
 

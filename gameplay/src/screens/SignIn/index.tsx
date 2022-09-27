@@ -1,27 +1,28 @@
 import { useNavigation } from '@react-navigation/native';
-import React,{ useState} from 'react';
+import React, { useState } from 'react';
 import {
     View,
     Text,
-    Image, 
+    Image,
 } from 'react-native';
 
 import IllustrationImg from '../../assets/illustration.png';
-import {ButtonIcon} from '../../components/ButtonIcon';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './styles';
+import { Background } from '../../components/Background';
 
 
-
-export function SignIn () {
-const navigation = useNavigation()
+export function SignIn() {
+    const navigation = useNavigation()
 
     function handleSignIn() {
-      navigation.navigate('Home')
+        navigation.navigate('Home')
     }
     return (
- 
+
+        <Background>
             <View style={styles.container}>
-         
+
                 <Image
                     source={IllustrationImg}
                     style={styles.image}
@@ -41,14 +42,14 @@ const navigation = useNavigation()
                     </Text>
 
                     <ButtonIcon
-                    title='Entrar com Discord'                  
-                    onPress={handleSignIn}
+                        title='Entrar com Discord'
+                        onPress={handleSignIn}
                     />
 
-                    
+
                 </View>
             </View>
-       
+        </Background>
     );
 }
 
