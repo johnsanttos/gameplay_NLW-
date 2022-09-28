@@ -15,6 +15,7 @@ import { ListHeader } from '../../components/ListHeader';
 import { theme } from '../../global/styles/theme';
 import { Member } from '../../components/Member';
 import { ListDivider } from '../../components/ListDivider';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 
 export function AppointmentDetails() {
@@ -30,6 +31,12 @@ export function AppointmentDetails() {
       username: 'Everton',
       avatar_url: 'https://github.com/EvertonCarvalho1.png',
       status: 'offline'
+    },
+    {
+      id: '3',
+      username: 'Jolielton',
+      avatar_url: 'https://github.com/Jolielton.png',
+      status: 'online'
     }
   ]
   return (
@@ -74,6 +81,12 @@ export function AppointmentDetails() {
         ItemSeparatorComponent={() => <ListDivider />}
         style={styles.members}
       />
+      <View style = {styles.footer}>
+        <ButtonIcon
+          title='Entrar na partida'
+        />
+      </View>
+
     </Background>
   )
 }

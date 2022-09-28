@@ -13,14 +13,21 @@ export const styles = StyleSheet.create({
         fontSize: 18
     },
     status: {
-   
+        flexDirection: 'row',
+        alignItems: 'center'
     },
-        nameStatus: {
+
+    bulletStatus: {
+        width:8,
+        height:8,
+        borderRadius:4,
+        marginRight: 9
+    },
+    nameStatus: {
         fontFamily: theme.fonts.text400,
         color: theme.colors.highlight,
-        fontSize: 13
-    },
-    bulletStatus:{
-        
+        fontSize: 13,
+       
+    
     }
 })

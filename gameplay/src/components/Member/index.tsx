@@ -43,7 +43,7 @@ export function Member({ data }: Props) {
                   
 
                <Text style={styles.nameStatus}>
-                   {isOnline ? 'Disponivel' : 'Ocupado'}
+                   {isOnline ? 'Disponível' : 'Ocupado'}
                </Text>
                 </View>
             </View>
