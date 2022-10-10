@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
@@ -59,6 +60,14 @@ export const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: theme.fonts.text500,
         color: theme.colors.highlight
+    },
+    caracteresLimit:{
+        fontFamily: theme.fonts.text400,
+        fontSize: 13,
+        color: theme.colors.highlight
+    },
+    footer:{
+        marginVertical: 20,
+        marginBottom: 56
     }
-
 })
