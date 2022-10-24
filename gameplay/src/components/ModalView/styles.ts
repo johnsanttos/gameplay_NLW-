@@ -5,19 +5,18 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: 100
-    },
-
-    overlay: {
+      },
+      overlay: {
         flex: 1,
-        backgroundColor: theme.colors.overlay,
-
-    },
-    bar: {
+        backgroundColor: theme.colors.overlay
+      },
+      bar: {
         width: 39,
         height: 2,
         borderRadius: 2,
+        backgroundColor: theme.colors.secondary30,
         alignSelf: 'center',
-        marginTop: 13
-
-    }
-})
+        marginTop: 13,
+        marginBottom: 103
+      }
+    });
