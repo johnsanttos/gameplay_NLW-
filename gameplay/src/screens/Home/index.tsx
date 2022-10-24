@@ -42,6 +42,19 @@ export function Home() {
             date:'14/09 ás 15:40h',
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Midware'
         },
+        {
+            id: '3',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date:'14/09 ás 15:40h',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Midware'
+        },
+
     ]
 
 function handleCategorySelected(categoryId:string) {
@@ -73,13 +86,16 @@ function handleAppointmentCreate (){
                 hasCheckBox = {true}       
                 />
 
-                <View style={styles.content} >     
+                  
                     <ListHeader
                     title='Partidas agendadas'
                     subtitle='Total 6'
                     />
 
-                    { <FlatList
+                 
+
+                </View>
+                { <FlatList
                     data={appointments}
                     keyExtractor ={item => item.id}
                     renderItem ={({item}) => (
@@ -89,12 +105,11 @@ function handleAppointmentCreate (){
                         />
                     )}
                     ItemSeparatorComponent={() => <ListDivider/> }
+                    contentContainerStyle ={{paddingBottom: 69}}
                     style ={styles.matches}
                     showsVerticalScrollIndicator ={false}
                     /> }
-
-                </View>
-            </View>
+           
         </Background>
     )
 }
