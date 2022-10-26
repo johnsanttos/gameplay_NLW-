@@ -6,6 +6,7 @@ import {
     Image,
 } from 'react-native';
 
+import { useAuth } from '../../hooks/auth';
 import IllustrationImg from '../../assets/illustration.png';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './styles';
@@ -14,6 +15,10 @@ import { Background } from '../../components/Background';
 
 export function SignIn() {
     const navigation = useNavigation()
+
+    const {user}  = useAuth()
+
+    console.log(user)
 
     function handleSignIn() {
         navigation.navigate('Home')

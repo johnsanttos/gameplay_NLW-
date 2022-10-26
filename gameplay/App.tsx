@@ -8,6 +8,7 @@ import { Routes } from './src/routes';
 import { Home } from './src/screens/Home';
 import { Background } from './src/components/Background';
 import {SignIn} from './src/screens/SignIn';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
   const [fontLoaded] = useFonts ({
@@ -28,7 +29,12 @@ return <AppLoading/>
     backgroundColor='transparent'
     translucent
 />
-   <Routes/>
+<AuthProvider>
+<Routes/>
+</AuthProvider>
+
+
+
    </Background>
   );
 }
