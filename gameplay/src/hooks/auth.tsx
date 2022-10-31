@@ -75,6 +75,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         setLoading(false)
       }
 
+      
 
     } catch {
       throw new Error('Não foi possivel autenticar')
